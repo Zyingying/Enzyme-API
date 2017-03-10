@@ -90,31 +90,25 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 根据期望值，返回当前渲染树是否等于给定节点的 布尔值
 
 ### `.matchesElement(node) => Boolean`
-返回当前给定的react元素是否匹配浅渲染树 的布尔值
+返回当前给定的react元素 是否 匹配浅渲染树 的布尔值
 
 ### `.hasClass(className) => Boolean`
-返回是否有这个className
+是否有这个className
 
+### `.is(selector) => Boolean`
+当前节点是否与提供的选择器匹配
 
-.is(selector) => Boolean
+### `.exists() => Boolean`
+当前节点是否存在
 
-Returns whether or not the current node matches a provided selector.
+### `.isEmpty() => Boolean`
+弃用: 用 `.exists()` 代替.
 
-.exists() => Boolean
+### `.not(selector) => ShallowWrapper`
+删除当前`wrapper`中与所提供的选择器匹配的节点。 (与  `.filter()`作用相反)
 
-Returns whether or not the current node exists.
-
-.isEmpty() => Boolean
-
-Deprecated: Use .exists() instead.
-
-.not(selector) => ShallowWrapper
-
-Remove nodes in the current wrapper that match the provided selector. (inverse of .filter())
-
-.children() => ShallowWrapper
-
-Get a wrapper with all of the children nodes of the current wrapper.
+### `.children() => ShallowWrapper`
+获取当前 `wrapper` 中所有子节点的 `wrapper`.
 
 .childAt(index) => ShallowWrapper
 
