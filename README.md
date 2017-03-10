@@ -80,24 +80,21 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 返回在浅渲染树中是否存在给定的node节点 的布尔值。
 
 ### `.containsAllMatchingElements(nodes) => Boolean`
-返回在浅渲染树中是否存在给定的 nodes节点组 的布尔值。
+返回在浅渲染树中是否存在给定的 **所有** react元素 的布尔值。
 
 
 ### `.containsAnyMatchingElements(nodes) => Boolean`
+返回在浅渲染树中是否存在给定react元素 **之一** 的布尔值
 
-Returns whether or not one of the given react elements exists in the shallow render tree.
+### `.equals(node) => Boolean`
+根据期望值，返回当前渲染树是否等于给定节点的 布尔值
 
-.equals(node) => Boolean
+### `.matchesElement(node) => Boolean`
+返回当前给定的react元素是否匹配浅渲染树 的布尔值
 
-Returns whether or not the current render tree is equal to the given node, based on the expected value.
+### `.hasClass(className) => Boolean`
+返回是否有这个className
 
-.matchesElement(node) => Boolean
-
-Returns whether or not a given react element matches the shallow render tree.
-
-.hasClass(className) => Boolean
-
-Returns whether or not the current node has the given class name or not.
 
 .is(selector) => Boolean
 
