@@ -58,3 +58,9 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 ### `.childAt(index) => ShallowWrapper`
 返回具有指定索引的子元素到新的wrapper
 
+### `.find(selector) => ShallowWrapper`
+根据选择器，找到渲染树中的节点。
+
+### `.findWhere(predicate) => ShallowWrapper`
+找到渲染树中为所提供的断言函数返回true的每个节点
+参数：`predicate (ShallowWrapper => Boolean)`
