@@ -62,5 +62,219 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 根据选择器，找到渲染树中的节点。
 
 ### `.findWhere(predicate) => ShallowWrapper`
-找到渲染树中为所提供的断言函数返回true的每个节点
+找到渲染树中里被的断言函数返回true的节点
 参数：`predicate (ShallowWrapper => Boolean)`
+断言函数返回布尔值
+
+### `.filter(selector) => ShallowWrapper`
+过滤当前包装器中与所提供的选择器不匹配的节点。
+
+### `.filterWhere(predicate) => ShallowWrapper`
+过滤当前包装器里被断言函数`predicate`不返回true的节点
+
+### `.contains(nodeOrNodes) => Boolean`
+返回给定的 节点/节点数组 是否在渲染树中的布尔值。
+
+
+### `.containsMatchingElement(node) => Boolean`
+返回在浅渲染树中是否存在给定的node节点 的布尔值。
+
+### `.containsAllMatchingElements(nodes) => Boolean`
+返回在浅渲染树中是否存在给定的 nodes节点组 的布尔值。
+
+
+### `.containsAnyMatchingElements(nodes) => Boolean`
+
+Returns whether or not one of the given react elements exists in the shallow render tree.
+
+.equals(node) => Boolean
+
+Returns whether or not the current render tree is equal to the given node, based on the expected value.
+
+.matchesElement(node) => Boolean
+
+Returns whether or not a given react element matches the shallow render tree.
+
+.hasClass(className) => Boolean
+
+Returns whether or not the current node has the given class name or not.
+
+.is(selector) => Boolean
+
+Returns whether or not the current node matches a provided selector.
+
+.exists() => Boolean
+
+Returns whether or not the current node exists.
+
+.isEmpty() => Boolean
+
+Deprecated: Use .exists() instead.
+
+.not(selector) => ShallowWrapper
+
+Remove nodes in the current wrapper that match the provided selector. (inverse of .filter())
+
+.children() => ShallowWrapper
+
+Get a wrapper with all of the children nodes of the current wrapper.
+
+.childAt(index) => ShallowWrapper
+
+Returns a new wrapper with child at the specified index.
+
+.parents() => ShallowWrapper
+
+Get a wrapper with all of the parents (ancestors) of the current node.
+
+.parent() => ShallowWrapper
+
+Get a wrapper with the direct parent of the current node.
+
+.closest(selector) => ShallowWrapper
+
+Get a wrapper with the first ancestor of the current node to match the provided selector.
+
+.shallow([options]) => ShallowWrapper
+
+Shallow renders the current node and returns a shallow wrapper around it.
+
+.render() => CheerioWrapper
+
+Returns a CheerioWrapper of the current node's subtree.
+
+.unmount() => ShallowWrapper
+
+A method that un-mounts the component.
+
+.text() => String
+
+Returns a string representation of the text nodes in the current render tree.
+
+.html() => String
+
+Returns a static HTML rendering of the current node.
+
+.get(index) => ReactElement
+
+Returns the node at the provided index of the current wrapper.
+
+.getNode() => ReactElement
+
+Returns the wrapper's underlying node.
+
+.getNodes() => Array<ReactElement>
+
+Returns the wrapper's underlying nodes.
+
+.at(index) => ShallowWrapper
+
+Returns a wrapper of the node at the provided index of the current wrapper.
+
+.first() => ShallowWrapper
+
+Returns a wrapper of the first node of the current wrapper.
+
+.last() => ShallowWrapper
+
+Returns a wrapper of the last node of the current wrapper.
+
+.state([key]) => Any
+
+Returns the state of the root component.
+
+.context([key]) => Any
+
+Returns the context of the root component.
+
+.props() => Object
+
+Returns the props of the current node.
+
+.prop(key) => Any
+
+Returns the named prop of the current node.
+
+.key() => String
+
+Returns the key of the current node.
+
+.simulate(event[, data]) => ShallowWrapper
+
+Simulates an event on the current node.
+
+.setState(nextState) => ShallowWrapper
+
+Manually sets state of the root component.
+
+.setProps(nextProps) => ShallowWrapper
+
+Manually sets props of the root component.
+
+.setContext(context) => ShallowWrapper
+
+Manually sets context of the root component.
+
+.instance() => ReactComponent
+
+Returns the instance of the root component.
+
+.update() => ShallowWrapper
+
+Calls .forceUpdate() on the root component instance.
+
+.debug() => String
+
+Returns a string representation of the current shallow render tree for debugging purposes.
+
+.type() => String|Function
+
+Returns the type of the current node of the wrapper.
+
+.name() => String
+
+Returns the name of the current node of the wrapper.
+
+.forEach(fn) => ShallowWrapper
+
+Iterates through each node of the current wrapper and executes the provided function
+
+.map(fn) => Array
+
+Maps the current array of nodes to another array.
+
+.reduce(fn[, initialValue]) => Any
+
+Reduces the current array of nodes to a value
+
+.reduceRight(fn[, initialValue]) => Any
+
+Reduces the current array of nodes to a value, from right to left.
+
+.slice([begin[, end]]) => ShallowWrapper
+
+Returns a new wrapper with a subset of the nodes of the original wrapper, according to the rules of Array#slice.
+
+.tap(intercepter) => Self
+
+Taps into the wrapper method chain. Helpful for debugging.
+
+.some(selector) => Boolean
+
+Returns whether or not any of the nodes in the wrapper match the provided selector.
+
+.someWhere(predicate) => Boolean
+
+Returns whether or not any of the nodes in the wrapper pass the provided predicate function.
+
+.every(selector) => Boolean
+
+Returns whether or not all of the nodes in the wrapper match the provided selector.
+
+.everyWhere(predicate) => Boolean
+
+Returns whether or not all of the nodes in the wrapper pass the provided predicate function.
+
+.dive([options]) => ShallowWrapper
+
+Shallow render the one non-DOM child of the current wrapper, and return a wrapper around the result.
