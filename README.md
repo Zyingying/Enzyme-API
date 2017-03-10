@@ -65,64 +65,63 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 #### `.find(selector) => ShallowWrapper`
 根据选择器，找到渲染树中的节点。
 
-### `.findWhere(predicate) => ShallowWrapper`
+#### `.findWhere(predicate) => ShallowWrapper`
 找到渲染树中里被的断言函数返回true的节点
 参数：`predicate (ShallowWrapper => Boolean)`
 断言函数返回布尔值
 
-### `.filter(selector) => ShallowWrapper`
+#### `.filter(selector) => ShallowWrapper`
 过滤当前包装器中与所提供的选择器不匹配的节点。
 
-### `.filterWhere(predicate) => ShallowWrapper`
+#### `.filterWhere(predicate) => ShallowWrapper`
 过滤当前包装器里被断言函数`predicate`不返回true的节点
 
-### `.contains(nodeOrNodes) => Boolean`
+#### `.contains(nodeOrNodes) => Boolean`
 返回给定的 节点/节点数组 是否在渲染树中的布尔值。
 
 
-### `.containsMatchingElement(node) => Boolean`
+#### `.containsMatchingElement(node) => Boolean`
 返回在浅渲染树中是否存在给定的node节点 的布尔值。
 
-### `.containsAllMatchingElements(nodes) => Boolean`
+#### `.containsAllMatchingElements(nodes) => Boolean`
 返回在浅渲染树中是否存在给定的 **所有** react元素 的布尔值。
 
 
-### `.containsAnyMatchingElements(nodes) => Boolean`
+#### `.containsAnyMatchingElements(nodes) => Boolean`
 返回在浅渲染树中是否存在给定react元素 **之一** 的布尔值
 
-### `.equals(node) => Boolean`
+#### `.equals(node) => Boolean`
 根据期望值，返回当前渲染树是否等于给定节点的 布尔值
 
-### `.matchesElement(node) => Boolean`
+#### `.matchesElement(node) => Boolean`
 返回当前给定的react元素 是否 匹配浅渲染树 的布尔值
 
-### `.hasClass(className) => Boolean`
+#### `.hasClass(className) => Boolean`
 是否有这个className
 
-### `.is(selector) => Boolean`
+#### `.is(selector) => Boolean`
 当前节点是否与提供的选择器匹配
 
-### `.exists() => Boolean`
+#### `.exists() => Boolean`
 当前节点是否存在
 
-### `.isEmpty() => Boolean`
+#### `.isEmpty() => Boolean`
 弃用: 用 `.exists()` 代替.
 
-### `.not(selector) => ShallowWrapper`
+#### `.not(selector) => ShallowWrapper`
 删除当前`wrapper`中与所提供的选择器匹配的节点。 (与  `.filter()`作用相反)
 
-### `.children() => ShallowWrapper`
+#### `.children() => ShallowWrapper`
 获取当前 `wrapper` 中所有子节点的 `wrapper`.
 
-.childAt(index) => ShallowWrapper
+#### `.childAt(index) => ShallowWrapper`
+返回具有指定索引的子元素的 `wrapper`
 
-Returns a new wrapper with child at the specified index.
+#### `.parents() => ShallowWrapper`
+获取当前节点的所有父级（祖先）
 
-.parents() => ShallowWrapper
 
-Get a wrapper with all of the parents (ancestors) of the current node.
-
-.parent() => ShallowWrapper
+#### `.parent() => ShallowWrapper`
 
 Get a wrapper with the direct parent of the current node.
 
