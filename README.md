@@ -1,6 +1,10 @@
 # Enzyme-API
 
+## 说在前头
+
 [Enzyme](https://github.com/airbnb/enzyme)是一个用于React的JavaScript测试实用程序，它使得更容易断言，操作和遍历您的React组件的输出，它模拟了jQuery的API，非常直观，易于使用和学习。
+
+这个api整理来自**airbnb的[gitbook](http://airbnb.io/enzyme)**
 
 它提供三种测试方法。
 
@@ -12,7 +16,7 @@
 wrapper是enzyme包装好的类，以供api使用
 
 
-# shallow
+## shallow
 `shallow` 在单元测试的过程中，`浅渲染`将一个组件渲染成虚拟DOM对象，并不会渲染其内部的子组件，也不是真正完整的`React Render`,无法与子组件互动。
 
 
@@ -29,9 +33,9 @@ wrapper是enzyme包装好的类，以供api使用
 `ShallowWrapper`: 在渲染输出后，返回浅渲染`ShallowWrapper`实例
 
 
-## ShallowWrapper API
+### ShallowWrapper API
 
-### `.at(index) => ShallowWrapper`
+#### `.at(index) => ShallowWrapper`
 
 返回当前索引的的节点到 wrapper
 在当前包装器的给定索引处返回节点周围的包装器。
@@ -55,10 +59,10 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 `.get(index) => ReactElement`
 
 ---
-### `.childAt(index) => ShallowWrapper`
+#### `.childAt(index) => ShallowWrapper`
 返回具有指定索引的子元素到新的wrapper
 
-### `.find(selector) => ShallowWrapper`
+#### `.find(selector) => ShallowWrapper`
 根据选择器，找到渲染树中的节点。
 
 ### `.findWhere(predicate) => ShallowWrapper`
