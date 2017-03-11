@@ -157,14 +157,12 @@ Shallow renders the current node and returns a shallow wrapper around it.
 返回 参数：索引节点的 浅wrapper。
 
 #### `.first() => ShallowWrapper`
+返回当前第一个节点 wrapper
 
-Returns a wrapper of the first node of the current wrapper.
+#### .last() => ShallowWrapper
+返回当前最后一个节点 wrapper
 
-.last() => ShallowWrapper
-
-Returns a wrapper of the last node of the current wrapper.
-
-.state([key]) => Any
+#### `.state([key]) => Any`
 
 Returns the state of the root component.
 
