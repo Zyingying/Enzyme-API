@@ -163,22 +163,18 @@ Shallow renders the current node and returns a shallow wrapper around it.
 返回当前最后一个节点 wrapper
 
 #### `.state([key]) => Any`
+返回根组件的状态
 
-Returns the state of the root component.
+#### `.context([key]) => Any`
+返回根组件的上下文环境
 
-.context([key]) => Any
+#### `.props() => Object`
+返回当前节点的 props
 
-Returns the context of the root component.
+#### `.prop(key) => Any`
+返回当前节点props的某个(key)属性的值
 
-.props() => Object
-
-Returns the props of the current node.
-
-.prop(key) => Any
-
-Returns the named prop of the current node.
-
-.key() => String
+#### `.key() => String`
 
 Returns the key of the current node.
 
