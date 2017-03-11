@@ -190,18 +190,15 @@ Shallow renders the current node and returns a shallow wrapper around it.
 手动设置根组件的上下文
 
 #### `.instance() => ReactComponent`
+返回根组件的实例
 
-Returns the instance of the root component.
+#### `.update() => ShallowWrapper`
+在根组件实例上调用.forceUpdate()
 
-.update() => ShallowWrapper
+#### `.debug() => String`
+返回当前浅渲染树的字符串表示形式，以便进行调试
 
-Calls .forceUpdate() on the root component instance.
-
-.debug() => String
-
-Returns a string representation of the current shallow render tree for debugging purposes.
-
-.type() => String|Function
+#### `.type() => String|Function`
 
 Returns the type of the current node of the wrapper.
 
