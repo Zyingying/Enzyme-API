@@ -145,22 +145,18 @@ Shallow renders the current node and returns a shallow wrapper around it.
 返回当前节点的静态HTML呈现
 
 #### `.get(index) => ReactElement`
-返回给出索引的节点
-Returns the node at the provided index of the current wrapper.
+返回给出索引的节点 ReactElement
 
-.getNode() => ReactElement
+#### `.getNode() => ReactElement`
+返回底层节点
 
-Returns the wrapper's underlying node.
+#### `.getNodes() => Array<ReactElement>`
+返回底层的一些节点
 
-.getNodes() => Array<ReactElement>
+#### `.at(index) => ShallowWrapper`
+返回 参数：索引节点的 浅wrapper。
 
-Returns the wrapper's underlying nodes.
-
-.at(index) => ShallowWrapper
-
-Returns a wrapper of the node at the provided index of the current wrapper.
-
-.first() => ShallowWrapper
+#### `.first() => ShallowWrapper`
 
 Returns a wrapper of the first node of the current wrapper.
 
