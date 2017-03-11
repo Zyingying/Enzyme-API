@@ -199,53 +199,42 @@ Shallow renders the current node and returns a shallow wrapper around it.
 返回当前浅渲染树的字符串表示形式，以便进行调试
 
 #### `.type() => String|Function`
+返回包装器(wapper)的当前节点的类型。
 
-Returns the type of the current node of the wrapper.
+#### `.name() => String`
+返回当前节点的名称
 
-.name() => String
+#### `.forEach(fn) => ShallowWrapper`
+迭代当前的每个节点并执行提供的函数
 
-Returns the name of the current node of the wrapper.
+#### `.map(fn) => Array`
+将当前的节点数组映射到另一个数组
 
-.forEach(fn) => ShallowWrapper
+#### `.reduce(fn[, initialValue]) => Any`
+将当前节点数组减少为一个值
 
-Iterates through each node of the current wrapper and executes the provided function
-
-.map(fn) => Array
-
-Maps the current array of nodes to another array.
-
-.reduce(fn[, initialValue]) => Any
-
-Reduces the current array of nodes to a value
-
-.reduceRight(fn[, initialValue]) => Any
-
+#### `.reduceRight(fn[, initialValue]) => Any`
+将当前节点数组从右到左减少为一个值
 Reduces the current array of nodes to a value, from right to left.
 
-.slice([begin[, end]]) => ShallowWrapper
+#### `.slice([begin[, end]]) => ShallowWrapper`
+根据`Array＃slice`的规则返回具有原始包装器的节点的子集的新包装器。
 
-Returns a new wrapper with a subset of the nodes of the original wrapper, according to the rules of Array#slice.
-
-.tap(intercepter) => Self
-
+#### `.tap(intercepter) => Self`
+点击wrapper方法链。有助于调试。
 Taps into the wrapper method chain. Helpful for debugging.
 
-.some(selector) => Boolean
+#### `.some(selector) => Boolean`
+返回 是否有 节点与提供的选择器匹配。
 
-Returns whether or not any of the nodes in the wrapper match the provided selector.
+#### `.someWhere(predicate) => Boolean`
+返回 是否有 节点 传递所提供的断言函数。
 
-.someWhere(predicate) => Boolean
+#### `.every(selector) => Boolean`
+返回 是否 有节点与提供的选择器匹配。
 
-Returns whether or not any of the nodes in the wrapper pass the provided predicate function.
+#### `.everyWhere(predicate) => Boolean`
+返回 是否 **所有** 节点都传递所提供的断言函数。
 
-.every(selector) => Boolean
-
-Returns whether or not all of the nodes in the wrapper match the provided selector.
-
-.everyWhere(predicate) => Boolean
-
-Returns whether or not all of the nodes in the wrapper pass the provided predicate function.
-
-.dive([options]) => ShallowWrapper
-
-Shallow render the one non-DOM child of the current wrapper, and return a wrapper around the result.
+#### `.dive([options]) => ShallowWrapper`
+浅渲染当前wrapper的一个非DOM子元素，并在结果周围返回一个wrapper
