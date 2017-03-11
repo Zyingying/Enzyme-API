@@ -120,37 +120,32 @@ expect(wrapper.find(Foo).at(0).props().foo).to.equal("bar");
 #### `.parents() => ShallowWrapper`
 获取当前节点的所有父级（祖先）
 
-
 #### `.parent() => ShallowWrapper`
+获取当前节点的直接父级
 
-Get a wrapper with the direct parent of the current node.
-
-.closest(selector) => ShallowWrapper
+#### `.closest(selector) => ShallowWrapper`
+根据选择器，获取当前节点的第一个祖先
 
 Get a wrapper with the first ancestor of the current node to match the provided selector.
 
-.shallow([options]) => ShallowWrapper
+#### `.shallow([options]) => ShallowWrapper`
 
 Shallow renders the current node and returns a shallow wrapper around it.
 
-.render() => CheerioWrapper
+#### `.render() => CheerioWrapper`
+返回当前节点的子树的CheerioWrapper
 
-Returns a CheerioWrapper of the current node's subtree.
+#### `.unmount() => ShallowWrapper`
+卸载组件的方法
 
-.unmount() => ShallowWrapper
+#### `.text() => String`
+返回当前渲染树中文本节点的 字符串表示形式。 
 
-A method that un-mounts the component.
+#### `.html() => String`
+返回当前节点的静态HTML呈现
 
-.text() => String
-
-Returns a string representation of the text nodes in the current render tree.
-
-.html() => String
-
-Returns a static HTML rendering of the current node.
-
-.get(index) => ReactElement
-
+#### `.get(index) => ReactElement`
+返回给出索引的节点
 Returns the node at the provided index of the current wrapper.
 
 .getNode() => ReactElement
