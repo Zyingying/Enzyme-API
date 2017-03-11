@@ -175,26 +175,21 @@ Shallow renders the current node and returns a shallow wrapper around it.
 返回当前节点props的某个(key)属性的值
 
 #### `.key() => String`
+返回当前节点的键（key）
 
-Returns the key of the current node.
+#### `.simulate(event[, data]) => ShallowWrapper`
+模拟当前节点上的事件
 
-.simulate(event[, data]) => ShallowWrapper
+#### `.setState(nextState) => ShallowWrapper`
+手动setState更新根组件状态
 
-Simulates an event on the current node.
+#### `.setProps(nextProps) => ShallowWrapper`
+手动更新根组件的props
 
-.setState(nextState) => ShallowWrapper
+#### `.setContext(context) => ShallowWrapper`
+手动设置根组件的上下文
 
-Manually sets state of the root component.
-
-.setProps(nextProps) => ShallowWrapper
-
-Manually sets props of the root component.
-
-.setContext(context) => ShallowWrapper
-
-Manually sets context of the root component.
-
-.instance() => ReactComponent
+#### `.instance() => ReactComponent`
 
 Returns the instance of the root component.
 
